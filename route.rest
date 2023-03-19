@@ -55,9 +55,42 @@ DELETE http://localhost:3000/users/6416c59aa0498340a51ad100
 
 
 ###
-PATCH http://localhost:3000/users
+PATCH http://localhost:3000/users/6416ca87a4ad0ec9a3c69a9b
 Content-Type: application/json
 
 {
-    
+    "name" : "abdvvvvvvvvv",
+}
+
+
+//actors operations
+###
+GET http://localhost:3000/actors
+
+###
+GET http://localhost:3000/actors/6416c8fda4ad0ec9a3c69a962
+
+###
+POST http://localhost:3000/actors
+Content-Type: application/json
+
+{
+    "name" : "Aharya",
+    "email" : "aiharya@gmail.com",
+    "country" : "Iia"
+}
+
+
+###
+DELETE http://localhost:3000/actors/6416c8fda4ad0ec9a3c69a96
+
+
+###
+PATCH http://localhost:3000/actors/6416cc26a4ad0ec9a3c69aa3
+Content-Type: application/json
+
+{
+    "name" : "Aharyacccccccccc",
+    "email" : "aiharya@gmail.com",
+    "country" : "Iia"
 }
