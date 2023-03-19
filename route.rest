@@ -18,7 +18,6 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/movies/64169c073a7052abae9b42c5
 
-
 ###
 PATCH http://localhost:3000/movies/64169901118cb670eeedd4ff
 Content-Type: application/json
@@ -49,10 +48,8 @@ Content-Type: application/json
     "country" : "Sri lanka"
 }
 
-
 ###
 DELETE http://localhost:3000/users/6416c59aa0498340a51ad100
-
 
 ###
 PATCH http://localhost:3000/users/6416ca87a4ad0ec9a3c69a9b
@@ -61,6 +58,7 @@ Content-Type: application/json
 {
     "name" : "abdvvvvvvvvv",
 }
+
 
 
 //actors operations
@@ -80,13 +78,44 @@ Content-Type: application/json
     "country" : "Iia"
 }
 
-
 ###
 DELETE http://localhost:3000/actors/6416c8fda4ad0ec9a3c69a96
 
-
 ###
 PATCH http://localhost:3000/actors/6416cc26a4ad0ec9a3c69aa3
+Content-Type: application/json
+
+{
+    "name" : "Aharyacccccccccc",
+    "email" : "aiharya@gmail.com",
+    "country" : "Iia"
+}
+
+
+
+
+//directors operations
+###
+GET http://localhost:3000/directors
+
+###
+GET http://localhost:3000/directors/6416d2e8eee8ece02a5b6b5f
+
+###
+POST http://localhost:3000/directors
+Content-Type: application/json
+
+{
+    "name" : "vvvvvvv",
+    "email" : "jcoc@gmail.com",
+    "country" : "Indccia"
+}
+
+###
+DELETE http://localhost:3000/directors/6416d32beee8ece02a5b6b65
+
+###
+PATCH http://localhost:3000/directors/6416d32beee8ece02a5b6b65
 Content-Type: application/json
 
 {
