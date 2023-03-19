@@ -17,4 +17,7 @@ app.use('/movies', moviesRouter)
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)
 
+const actorsRouter = require('./routes/actors')
+app.use('/actors', actorsRouter)
+
 app.listen(3000, () => console.log('Server Started'))
