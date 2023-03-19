@@ -13,8 +13,8 @@ router.get('/', async (req, res) => {
 })
 
 //Getting one movie
-router.get('/:id', (req, res) => {
-
+router.get('/:id', getmovie, (req, res) => {
+    res.json(res.movie)
 })
 
 //Creating a movie
