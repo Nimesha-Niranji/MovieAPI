@@ -14,4 +14,7 @@ app.use(express.json())
 const moviesRouter = require('./routes/movies')
 app.use('/movies', moviesRouter)
 
+const usersRouter = require('./routes/users')
+app.use('/users', usersRouter)
+
 app.listen(3000, () => console.log('Server Started'))
