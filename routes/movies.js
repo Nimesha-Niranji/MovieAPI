@@ -33,13 +33,40 @@ router.post('/', async (req, res) => {
 })
 
 //Updating a movie
-router.patch('/:id', async (req, res) => {
-
+router.patch('/:id', getmovie, async (req, res) => {
+    if (req.body.title != null) {
+        res.movie.title = req.body.title
+      }
+      if (req.body.year != null) {
+        res.movie.year = req.body.year
+      }
+      if (req.body.director != null) {
+        res.movie.director = req.body.director
+      }
+      try {
+        const updatedMovie = await res.movie.save()
+        res.json(updatedMovie)
+      } catch (err) {
+        res.status(400).json({ message: err.message })
+      }
 })
 
 //Deleting a movie
-router.delete('/:id', async (req, res) => {
-
+/*router.delete('/:id', getmovie, async (req, res) => {
+    try {
+        await res.movie.remove()
+        res.json({ message: 'Deleted Movie' })
+      } catch (err) {
+        res.status(500).json({ message: err.message })
+      }
+})*/
+router.delete('/:id', getmovie, async (req, res) => {
+  try {
+      await Movie.deleteOne({_id: res.movie._id})
+      res.json({ message: 'Deleted Movie' })
+  } catch (err) {
+      res.status(500).json({ message: err.message })
+  }
 })
 
 async function getmovie(req, res, next) {
