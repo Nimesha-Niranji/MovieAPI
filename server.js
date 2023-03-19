@@ -20,7 +20,6 @@ app.use('/users', usersRouter)
 const actorsRouter = require('./routes/actors')
 app.use('/actors', actorsRouter)
 
-
 const directorsRouter = require('./routes/directors')
 app.use('/directors', directorsRouter)
 
