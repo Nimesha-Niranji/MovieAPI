@@ -2,14 +2,29 @@
 GET http://localhost:3000/movies
 
 ###
-GET http://localhost:3000/movies/64169901118cb670eeedd4ffn
+GET http://localhost:3000/movies
 
 ###
 POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-    "title" : "96",
-    "year" : 2018,
-    "director" : "C Prem Kumar"
+    "title" : "Charlie",
+    "year" : 2015,
+    "director" : "Martin Prakkat"
+}
+
+
+###
+DELETE http://localhost:3000/movies/64169c073a7052abae9b42c5
+
+
+###
+PATCH http://localhost:3000/movies/64169901118cb670eeedd4ff
+Content-Type: application/json
+
+{
+    "title" : "ABCD",
+    "year" : 2013,
+    "director" : "Remo D'Souza"
 }
