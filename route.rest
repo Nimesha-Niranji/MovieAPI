@@ -1,3 +1,4 @@
+//movies operations
 ###
 GET http://localhost:3000/movies
 
@@ -14,7 +15,6 @@ Content-Type: application/json
     "director" : "Martin Prakkat"
 }
 
-
 ###
 DELETE http://localhost:3000/movies/64169c073a7052abae9b42c5
 
@@ -27,4 +27,37 @@ Content-Type: application/json
     "title" : "ABCD",
     "year" : 2013,
     "director" : "Remo D'Souza"
+}
+
+
+
+
+//users operations
+###
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name" : "abd",
+    "email" : "abd@gmail.com",
+    "country" : "Sri lanka"
+}
+
+
+###
+DELETE http://localhost:3000/users/6416c59aa0498340a51ad100
+
+
+###
+PATCH http://localhost:3000/users
+Content-Type: application/json
+
+{
+    
 }
