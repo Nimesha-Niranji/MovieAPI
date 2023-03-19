@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const Movie = require('../models/movieModel')
+const Movie = require('../models/movie')
 
 //Getting all movies
 router.get('/', async (req, res) => {
     try {
         const movies = await Movie.find()
-        res.json(Movie)
+        res.json(movies)
       } catch (err) {
         res.status(500).json({ message: err.message })
       }
@@ -47,7 +47,7 @@ async function getmovie(req, res, next) {
     try {
       movie = await Movie.findById(req.params.id)
       if (movie == null) {
-        return res.status(404).json({ message: 'Cannot find subscriber' })
+        return res.status(404).json({ message: 'Cannot find the movie' })
       }
     } catch (err) {
       return res.status(500).json({ message: err.message })
